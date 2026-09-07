@@ -33,7 +33,7 @@ function App() {
   const fetchIncidents = async (currentLoc = userLocation) => {
     try {
       let url = 'https://surabaya-api-v1ey.onrender.com/api/incidents';
-      if (currentLoc) url += `?lat=${currentLoc.lat}&lng=${currentLoc.lng}&radius=15`;
+      if (currentLoc) url += `?lat=${currentLoc.lat}&lng=${currentLoc.lng}&radius=9999`;
       const res = await fetch(url);
       setIncidents(await res.json());
     } catch (err) {
